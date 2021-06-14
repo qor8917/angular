@@ -1,0 +1,13 @@
+<div class="title">
+  <h1>나의하루</h1>
+  <h2>5월 25일</h2>
+</div>
+<div>
+  <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
+    <app-todo [todoee]="todo"></app-todo>
+  </div>
+</div>
+<div>
+  <!-- 자식 컴포넌트에서 값을 전달 할때  -->
+  <app-add-todo (onTodoAdded)="addTodo($event)"></app-add-todo>
+</div>
